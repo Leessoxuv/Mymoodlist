@@ -1,0 +1,126 @@
+@font-face {
+  font-family: 'NanumSquareNeo-Variable';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_11-01@1.0/NanumSquareNeo-Variable.woff2')
+    format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+* {
+  box-sizing: border-box;
+  font-family: 'NanumSquareNeo-Variable';
+}
+body {
+  background-color: #F3EEFF;
+}
+.nav-bar {
+  color: blueviolet;
+  font-size: 2em;
+}
+button {
+  background: none;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  color: grey;
+  border: 1px solid grey;
+  border-radius: 6px;
+  font-size: 20px;
+}
+.main {
+  display: flex;
+  margin: auto;
+  width: 1000px;
+  max-width: calc(100% - 60px);
+  margin-top: 20px;
+  font-size: 20px;
+}
+.mood-pad {
+  position: relative;
+  width: 40%;
+  flex-shrink: 0;
+  padding: 30px 0;
+}
+.mood-box {
+  background-color: white;
+  border: 1px solid #ddd;
+}
+.mood-box > * {
+  width: 100%;
+  margin-bottom: 20px;
+}
+.saveBtn {
+  color: white;
+  min-width: none;
+  min-height: none;
+  width: 3.5rem;
+  height: 3.5rem;
+  margin: 1rem 1rem;
+  border-radius: 50px;
+  
+}
+.music-input {
+  text-align: center;
+  border: #ddd;
+  font-size: 15px;
+  padding: 20px;
+}
+.mood-content {
+  font-size: 20px;
+  padding: 20px;
+}
+
+/* 오른쪽*/
+.mood-list {
+  width: 60%;
+  height: 95vh;
+  overflow: scroll;
+  overflow-x: hidden;
+  padding: 30px;
+}
+.mood-list::-webkit-scrollbar {
+  background-color: transparent;
+  width: 17px;
+}
+.mood-list::-webkit-scrollbar-thumb {
+  background-color: #C7AFFF;
+  background-clip: padding-box;
+  border: 3px solid transparent;
+  border-radius: 50px;
+}
+.list-article {
+  background-color: rgb(256, 256, 256, 0.9);
+  box-shadow: inset 0px 0px 0px 2px #C7AFFF;
+  border-radius: 20px;
+  margin-bottom: 40px;
+  padding: 20px;
+}
+.list-music {
+  font-size: 20px;
+  letter-spacing: 2px;
+}
+.list-content {
+  font-size: 25px;
+  letter-spacing: 2px;
+}
+.btnWrap {
+  text-align: right;
+}
+.editBtn {
+  margin-right: 10px;
+}
+@media (max-width: 900px) {
+  .main {
+    flex-direction: column;
+    width: 95%;
+    max-width: none;
+  }
+  .mood-pad {
+    width: 100%;
+  }
+  .mood-list {
+    padding: 0;
+    width: 100%;
+    height: inherit;
+    overflow: auto;
+  }
+}
